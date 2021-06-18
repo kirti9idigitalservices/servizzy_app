@@ -12,7 +12,7 @@ const Stack = createStackNavigator();
 function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="OrderHistory">
+      <Stack.Navigator initialRouteName="Help">
       <Stack.Screen name="Account" component={Account} />
       <Stack.Screen name="Help" component={Help} /> 
       <Stack.Screen name="OrderHistory" component={OrderHistory} />

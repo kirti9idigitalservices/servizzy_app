@@ -1,13 +1,13 @@
 import * as React from 'react';
 import { StyleSheet, Text, View, Image,} from "react-native";
-import { StatusBar } from "expo-status-bar";
+
 
 
 function Help({ navigation }) {
     
     return (
            <View style={styles.container}>
-                <StatusBar style="auto" />
+                
                 <View> 
                  <Image style={styles.image} source={ require('../imges/image 1.png')}/>
                  </View>
@@ -21,7 +21,7 @@ function Help({ navigation }) {
 
 
                  <View>
-                 <Image style={styles.button} source={ require('../imges/image 2.png')}/>
+                 <Image style={styles.icon} source={ require('../imges/image 2.png')}/>
                </View>
 
          </View>     
@@ -37,20 +37,20 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor:'white',
+   // backgroundColor:'white',
 
   },
 image:{
-            height: 350,
-            width: 350,
-            marginTop: 20,
+            height: 50,
+            width: 50,
+            marginTop: 5,
      },
-button: {
+icon: {
         
-    height: 50,
-    width: 50,
-    marginTop: 100,
-    marginLeft:350,
+    height: 20,
+    width: 20,
+    marginTop: 30,
+    marginLeft:30,
 
       },
     

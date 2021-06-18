@@ -9,7 +9,7 @@ function OrderHistory({ navigation }) {
            <View style={styles.container}>
                 <StatusBar style="auto" />
                 <View> 
-                 <Image style={styles.image} source={ require('../imges/image 3.png')}/>
+        
                  </View>
                  
                  <View style={styles.RectangleShapeView}>
@@ -55,7 +55,7 @@ image:{
     width: '100%',
       height: 60,
       backgroundColor: 'white',
-      marginTop: 20,
+      marginTop: 10,
       }, 
       
       button: {

@@ -85,7 +85,7 @@ function Account({ navigation }) {
             height: 60,
             backgroundColor: 'white',
             flexDirection: 'row',
-            marginTop: 20,
+            marginTop: 5,
            
             },
   image:{
