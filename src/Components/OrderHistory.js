@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { StyleSheet, Text, View, Image, TouchableOpacity} from "react-native";
+import { StyleSheet, Text, View, Image, TouchableOpacity,} from "react-native";
 import { StatusBar } from "expo-status-bar";
 
 
@@ -9,23 +9,23 @@ function OrderHistory({ navigation }) {
            <View style={styles.container}>
                 <StatusBar style="auto" />
                 <View> 
-        
+                <Image style={styles.image} source={ require('../imges/Order.png')}/>
                  </View>
                  
                  <View style={styles.RectangleShapeView}>
                    <Text style={{fontWeight:'bold',fontSize: 20, marginLeft: 40,marginTop: 10,}}>Sorry,</Text>
-                   <Text style={{color:'grey',fontSize: 13, marginLeft: 40,marginTop: 3,}}>
+                   <Text style={{color:'grey',fontSize: 13, marginLeft: 40,marginTop: 3, marginRight:90}}>
                        It seems like you don't have any ongoing service for your car.
                    </Text>
                </View>
   
                <View>
             <TouchableOpacity
-                style={[styles.button, styles.buttonClose]}>
+                style={[styles.button, styles.buttonClose]}
+                onPress={() => navigation.navigate('Help')}>
                <Text style={styles.textStyle}>Book a service</Text>
                </TouchableOpacity>
-              
-            </View>  
+                </View>
 
          </View>     
     );
@@ -44,8 +44,8 @@ const styles = StyleSheet.create({
 
   },
 image:{
-            height: 350,
-            width: 350,
+            height: 250,
+            width: 250,
             marginTop: 20,
      },
 
@@ -67,8 +67,8 @@ image:{
 
       buttonClose: {
         backgroundColor: '#FF4500',
-        width:'70%',
-        marginLeft: 90,
+        width:'90%',
+        marginLeft: 20,
         marginTop: 30,
       },
 

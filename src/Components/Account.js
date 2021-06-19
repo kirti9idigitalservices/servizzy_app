@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { StyleSheet, Text, View, Image,TextInput} from "react-native";
+import { StyleSheet, Text, View, Image, TouchableOpacity} from "react-native";
 import { StatusBar } from "expo-status-bar";
 
 
@@ -7,7 +7,7 @@ function Account({ navigation }) {
     
     return (
         
-        <View style={styles.container}>
+        <View style={styles.container}> 
             <StatusBar style="auto" />
             <View style={styles.RectangleShapeView}>
                <Text style={{fontWeight:'bold',fontSize: 30, marginLeft: 30,marginTop: 10,}}>My Account</Text>
@@ -29,10 +29,11 @@ function Account({ navigation }) {
                <Text style={styles.textStyle}>Refer & Earn</Text>
            </View>
 
-           <View style={styles.RectangleShapeViewblock}>
+           <TouchableOpacity style={styles.RectangleShapeViewblock}
+             onPress={() => navigation.navigate('OrderHistory')}>
                
                <Text style={{fontWeight:'bold',fontSize: 20, marginLeft: 70,marginTop: 10,}}>Order History</Text>
-           </View>
+           </TouchableOpacity>
           
           
            <View style={styles.RectangleShapeViewblock}>
@@ -40,10 +41,11 @@ function Account({ navigation }) {
                <Text style={styles.textStyle}>Scan OBD</Text>
            </View>
           
-           <View style={styles.RectangleShapeViewblock}>
+           <TouchableOpacity style={styles.RectangleShapeViewblock}
+            onPress={() => navigation.navigate('Help')}>
                <Image style={styles.image} source={ require('../imges/3.png')}/>
                <Text style={styles.textStyle}>Help & Support</Text>
-           </View>
+           </TouchableOpacity>
           
            <View style={styles.RectangleShapeViewblock}>
                <Image style={styles.image} source={ require('../imges/2.png')}/>

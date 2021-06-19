@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { StyleSheet, Text, View, Image,} from "react-native";
+import { StyleSheet, Text, View, Image,TouchableOpacity} from "react-native";
 
 
 
@@ -9,19 +9,22 @@ function Help({ navigation }) {
            <View style={styles.container}>
                 
                 <View> 
-                 <Image style={styles.image} source={ require('../imges/image 1.png')}/>
+                 <Image style={styles.image} source={ require('../imges/image1.png')}/>
                  </View>
                  
                  <View style={styles.RectangleShapeView}>
-                   <Text style={{fontWeight:'bold',fontSize: 20, marginLeft: 40,marginTop: 10,}}>Chat with Support</Text>
+                   <Text style={{fontWeight:'bold',fontSize: 20, marginLeft: 40,marginTop: 10,}}>
+                     Chat with Support</Text>
                    <Text style={{color:'grey',fontSize: 13, marginLeft: 40,marginTop: 3,}}>
                        Available 10AM - 7PM
                    </Text>
                </View>
 
-
-                 <View>
-                 <Image style={styles.icon} source={ require('../imges/image 2.png')}/>
+                <View>
+                 <TouchableOpacity
+                 onPress={() => navigation.navigate('Otp')}>
+                 <Image style={styles.icon} source={ require('../imges/image2.png')} />
+               </TouchableOpacity>
                </View>
 
          </View>     
@@ -37,20 +40,19 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-   // backgroundColor:'white',
+   backgroundColor:'white',
 
   },
 image:{
-            height: 50,
-            width: 50,
+            height: 250,
+            width: 250,
             marginTop: 5,
      },
 icon: {
-        
-    height: 20,
-    width: 20,
-    marginTop: 30,
-    marginLeft:30,
+         height: 50,
+    width: 50,
+    marginTop: 180,
+    marginLeft:280,
 
       },
     
